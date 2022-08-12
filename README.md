@@ -1,4 +1,4 @@
-# Youtuber downloader
+# Youtube downloader
 
 This is a small project that I felt the necessity to do, because sometimes I want to see some youtube videos offline.
 
