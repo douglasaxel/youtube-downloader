@@ -4,34 +4,60 @@ This is a small project that I felt the necessity to do, because sometimes I wan
 
 ---
 
-Step by step to add the script to your system $PATH:
+## Installation
 
-a) Create the script e.g. ```$HOME/Desktop/myscript.py:```
-
-```python
-#!/usr/bin/python
-print("Hello World!")
-```
-
-b) Change the permission of the script file to make it executable:
+Enter the virtual enviroment
 
 ```shell
-$ chmod +x myscript.py
+$ source ./.venv/bin/activate
 ```
 
-c) Add a customized directory to the $PATH (see why in the notes below) to use it for the user's scripts:
+or if you are in windows
+
+```shell
+$ ./.venv/Scripts/Activate.ps1
+```
+
+then you can run the following command
+
+```shell
+$ pip install -r requirements.txt
+```
+
+after the installation, you can run the script by the following command<br>
+*The arguments are optional*
+
+```shell
+$ python main.py <youtube URL> <output directory>
+```
+
+
+---
+
+## Add to $PATH
+
+Step by step to add the script to your system $PATH:<br>
+**This works only in linux**
+
+a) Change the permission of the shell script file to make it executable:
+
+```shell
+$ chmod +x run.sh
+```
+
+b) Add a customized directory to the $PATH (see why in the notes below) to use it for the user's scripts:
 
 ```shell
 $ export PATH="$PATH:$HOME/bin"
 ```
 
-d) Create a symbolic link to the script as follows:
+c) Create a symbolic link to the shell script as follows:
 
 ```shell
-$ ln -s $HOME/Desktop/myscript.py $HOME/bin/hello
+$ ln -s $HOME/Desktop/run.sh $HOME/bin/ytdownloader
 ```
 
-Notice that hello (can be anything) is the name of the command that you will use to invoke your script.
+Notice that ytdownloader (can be anything) is the name of the command that you will use to invoke your script.
 
 ---
 
