@@ -11,7 +11,7 @@ while link == '':
 outputDir = Path(
     argv[2] if len(argv) >= 3 else None
     or input('Pasta para salvar: ')
-    or '/mnt/f/Videos/yt_downloader/'
+    or '/mnt/f/Videos/yt_downloader/'  # Here you must put a path valid in you pc
 )
 yt = YouTube(link, on_progress_callback=on_progress)
 name = f'{slugify(yt.title)}.mp4'
